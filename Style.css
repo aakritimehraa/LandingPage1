@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    background: #0062be;
+    transition: 0.5;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+   max-width: 100px;
+    position: relative;
+}
+header ul{
+    display: flex;
+    position: relative;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .textBox{
+    position: relative;
+    max-width: 600px;
+}
+.content .textBox h2{
+color: white;
+font-size: 4em;
+line-height: 1.5em;
+font-weight: 800;
+text-transform: uppercase;
+}
+.content .textBox h2 span{
+    font-size: 2em;
+}
+.content .textBox p{
+    color: white;
+}
+
+.content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.content .imgBox{
+    width: 600px;
+    display: flex;
+    padding-right: 50px;
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+.content .imgBox img{
+    max-width: 260px;
+}
+
+.thumbb{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.thumbb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    transition: 0.5s;
+    
+}
+.thumbb li:hover{
+    transform: translateY(-15px);
+}
+
+.thumbb li img{
+    max-width: 40px;
+}
+
+@media only screen and (max-width: 990px) {
+
+  section{
+      padding: 40px;
+  }
+  header{
+      padding: 20px 40px;
+  }
+  header .logo{
+      position: relative;
+      max-width: 60px;
+  }
+  header ul{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      z-index: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+      visibility: hidden;
+      opacity: 0;
+  }
+
+  header ul li a{
+      display: inline-block;
+      color: black;
+      font-weight: 400;
+      margin-left: 0;
+      text-decoration: none;
+      font-size: 2em;
+      margin: 10px 0;
+  }
+header ul li a:hover{
+    color: #ed0223;
+}
+.toggleMenu{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url('https://cdn4.iconfinder.com/data/icons/navigation-40/24/hamburger-menu-512.png');
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+}
+
+.toggleMenu.active{
+    background: url('close.png');
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+header ul.active{
+    visibility: visible;
+    opacity: 1;
+}
+.content{
+    flex-direction: column;
+    margin-top: 80px;
+}
+.content .textBox{
+    position: relative;
+    max-width: 100%;
+    padding-right: 20px;
+}
+.content .textBox h2{
+    font-size: 3em;
+}
+.content .textBox a{
+    font-size: 14px;
+    padding: 10px 15px;
+}
+.content .imgBox{
+    width: 100%;
+    display: flex;
+    padding-right: 0;
+    margin-top: 50px;
+    justify-content: center;
+}
+.content .imgBox img{
+    max-width: 150px;
+}
+.thumbb li img{
+    max-width: 30px;
+}
+
+  }
